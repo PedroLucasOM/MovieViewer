@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+.space-right {
+  margin-right: .25em !important;
+}
+
+.space-left {
+  margin-right: 5em !important;
+}
+
+.inline {
+  display: inline-flex !important;
+}
