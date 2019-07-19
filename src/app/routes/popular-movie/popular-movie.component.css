@@ -1,5 +1,36 @@
 .content {
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
   margin-top: 3vh;
+}
+.card {
+  height: 100%;
+}
+
+.card :hover {
+  cursor: pointer;
+}
+
+.card-img-top {
+  height: 28rem;
+}
+
+.text {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.text-title {
+  font-size: 150%;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.spinner {
+  padding: 10%;
+  text-align: center;
 }
