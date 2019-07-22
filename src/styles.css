@@ -11,3 +11,7 @@
 .inline {
   display: inline-flex !important;
 }
+
+.center {
+  text-align: center;
+}

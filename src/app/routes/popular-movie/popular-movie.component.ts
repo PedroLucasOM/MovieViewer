@@ -10,9 +10,14 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 })
 export class PopularMovieComponent implements OnInit {
 
+  movie: Movie = new Movie();
   movies: Movie[];
+
+  rating: number;
+
   flagCarregando = false;
   flagPopularMovies = false;
+  flagView = false;
 
   @ViewChild('nav', {static: false}) ds: DragScrollComponent;
 
@@ -35,6 +40,16 @@ export class PopularMovieComponent implements OnInit {
     );
   }
 
+  onFindMovieByID(id: string) {
+    this.flagView = false;
+    this.servicePopularMovieService.onFindMovie(id).then(
+      response => {
+        this.movie = response;
+        this.flagView = true;
+      }
+    );
+  }
+
   onMoveLeft() {
     this.ds.moveLeft();
   }
@@ -43,4 +58,7 @@ export class PopularMovieComponent implements OnInit {
     this.ds.moveRight();
   }
 
+  onShowModal(movie: Movie) {
+    this.flagView = true;
+  }
 }

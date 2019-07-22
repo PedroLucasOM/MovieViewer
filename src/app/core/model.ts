@@ -7,4 +7,7 @@ export class Movie {
   genre_ids: any[];
   overview: string;
   release_date: any;
+  backdrop_path: any;
+  popularity: any;
+  vote_count: any;
 }
