@@ -1,7 +1,7 @@
 .content {
-  width: 90vw;
   margin: 0 auto;
-  margin-top: 15vh;
+  margin-top: 9vh;
+  margin-bottom: 7vh;
 }
 .card {
   height: 100%;
@@ -28,6 +28,7 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  color: #212529;
 }
 
 .spinner {

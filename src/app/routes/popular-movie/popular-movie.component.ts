@@ -57,8 +57,4 @@ export class PopularMovieComponent implements OnInit {
   onMoveRight() {
     this.ds.moveRight();
   }
-
-  onShowModal(movie: Movie) {
-    this.flagView = true;
-  }
 }

@@ -1,8 +1,20 @@
-.toolbar {
+.navbar {
+  background-color: #666666;
   position: fixed;
-  width: 100%;
   top: 0;
-  display: block !important;
-  padding: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+}
+
+.navbar-toggle {
+  color: #e5e5e5;
+  position: relative;
+  top: 15%;
+  transform: translateY(-50%);
+}
+
+.title {
+  color: #e5e5e5;
+  font-weight: bold;
 }

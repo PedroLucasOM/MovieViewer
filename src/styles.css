@@ -15,3 +15,15 @@
 .center {
   text-align: center;
 }
+
+.ui-g {
+  width: 100%;
+}
+
+.btn-toolbar {
+  width: 100%;
+}
+
+.input-group {
+  width: 100% !important;
+}

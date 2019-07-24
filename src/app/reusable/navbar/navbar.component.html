@@ -1,22 +1,35 @@
-<div class="toolbar">
-  <p-toolbar>
-    <div class="ui-toolbar-group-left">
-      <button pButton type="button" label="New" icon="pi pi-plus" class="space-right"></button>
-      <button pButton type="button" label="Upload" icon="pi pi-upload" class="ui-button-success space-right"></button>
-
-      <i class="ui-toolbar-separator pi pi-bars" style="vertical-align: middle"></i>
-
-    </div>
-
-    <div class="ui-toolbar-group-right inline">
-      <div class="ui-inputgroup space-left">
-        <input type="text" pInputText placeholder="Pesquise">
-        <button pButton type="button" icon="pi pi-search"></button>
+<nav class="navbar">
+  <div class="ui-g" style="width: 100%;">
+    <div class="ui-g-6">
+      <div class="ui-g ui-fluid">
+        <div class="ui-g-3">
+          <h3 class="title">MovieViewer</h3>
+        </div>
+        <div class="ui-g-1">
+          <a href="javascript:;" class="navbar-toggle"><i class="fa fa-bars"></i></a>
+        </div>
       </div>
-      <button pButton type="button" icon="fa fa-adjust" class="ui-button space-right"></button>
-      <button pButton type="button" icon="fa fa-minus" class="ui-button space-right"></button>
-      <button pButton type="button" icon="fa fa-font" class="ui-button space-right"></button>
-      <button pButton type="button" icon="fa fa-plus" class="ui-button space-right"></button>
     </div>
-  </p-toolbar>
-</div>
+    <div class="ui-g-6">
+      <div class="btn-toolbar">
+        <div class="ui-g ui-fluid">
+          <div class="ui-g-7">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquise">
+              <div class="input-group-prepend">
+                <div class="input-group-text" style="cursor: pointer;"><i class="fa fa-search"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-g-2"></div>
+          <div class="btn-group ui-g-3 ui-fluid" role="group">
+            <button type="button" class="btn btn-light"><i class="fa fa-adjust"></i></button>
+            <button type="button" class="btn btn-light"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-light"><i class="fa fa-font"></i></button>
+            <button type="button" class="btn btn-light"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

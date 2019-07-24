@@ -43,7 +43,6 @@ export class GenreMovieService {
 
   onValidList(data: Movie[]) {
     this.valid = this.valid.concat(data);
-    console.log(data);
     return data;
   }
 

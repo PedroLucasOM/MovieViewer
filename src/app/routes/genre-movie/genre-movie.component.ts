@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { GenreMovieService } from './genre-movie.service';
-import { Genre } from 'src/app/core/model';
+import { Genre, Movie } from 'src/app/core/model';
 import { DragScrollComponent } from 'ngx-drag-scroll';
+import { PopularMovieService } from '../popular-movie/popular-movie.service';
 
 @Component({
   selector: 'app-genre-movie',
@@ -11,11 +12,13 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 export class GenreMovieComponent implements OnInit {
 
   data: Genre[];
+  movie: Movie = new Movie();
   flagMoviesByGenre = false;
+  flagView = false;
 
   @ViewChildren('nav') dragScrolls: QueryList<DragScrollComponent>;
 
-  constructor(private serviceGenreMovie: GenreMovieService) { }
+  constructor(private serviceGenreMovie: GenreMovieService, private servicePopularMovieService: PopularMovieService) { }
 
   ngOnInit() {
     this.onFindMoviesByGenre();
@@ -24,6 +27,17 @@ export class GenreMovieComponent implements OnInit {
   onFindMoviesByGenre() {
     this.data = this.serviceGenreMovie.onMakeListMovieByGenre();
     this.flagMoviesByGenre = true;
+  }
+
+  onFindMovieByID(id: string) {
+    this.flagView = false;
+    this.servicePopularMovieService.onFindMovie(id).then(
+      response => {
+        this.movie = response;
+        console.log(this.movie);
+        this.flagView = true;
+      }
+    );
   }
 
   // tslint:disable: no-string-literal
