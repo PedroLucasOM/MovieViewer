@@ -1,6 +1,8 @@
+import { MoviesModule } from './movies/movies.module';
 import { PopularMovieModule } from './popular-movie/popular-movie.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GenreMovieModule } from './genre-movie/genre-movie.module';
 
 
 
@@ -8,10 +10,14 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   imports: [
     CommonModule,
-    PopularMovieModule
+    PopularMovieModule,
+    GenreMovieModule,
+    MoviesModule
   ],
   exports: [
-    PopularMovieModule
+    PopularMovieModule,
+    GenreMovieModule,
+    MoviesModule
   ]
 })
 export class RoutesModule { }

@@ -11,3 +11,9 @@ export class Movie {
   popularity: any;
   vote_count: any;
 }
+
+export class Genre {
+  id: number;
+  name: string;
+  movies: Movie[];
+}
