@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'app-navbar',
@@ -8,16 +9,27 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   text: string;
+  flagReturnHome = false;
   @Output() searchMoviesEvent = new EventEmitter();
+  @Output() returnHome = new EventEmitter();
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
   }
 
   onSearchMovies() {
-    console.log(this.text);
-    this.searchMoviesEvent.emit(this.text);
+    if (this.text && this.text.trim()) {
+      this.searchMoviesEvent.emit(this.text);
+    } else {
+      this.messageService.add({severity: 'warn', summary: 'Texto vazio', detail: 'Preencha o campo de pesquisa!'});
+    }
+  }
+
+  onReturnHome() {
+    this.text = '';
+    this.flagReturnHome = true;
+    this.returnHome.emit(this.flagReturnHome);
   }
 
 }

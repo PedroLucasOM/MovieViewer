@@ -18,6 +18,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {DialogModule} from 'primeng/dialog';
 import {FieldsetModule} from 'primeng/fieldset';
 import {RatingModule} from 'primeng/rating';
+import {ToastModule} from 'primeng/toast';
 
 import { DragScrollModule } from 'ngx-drag-scroll';
 
@@ -26,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 
 @NgModule({
@@ -47,6 +49,7 @@ import { FormsModule } from '@angular/forms';
     FieldsetModule,
     RatingModule,
     ProgressSpinnerModule,
+    ToastModule,
     MatButtonModule,
     MatIconModule,
     FontAwesomeModule,
@@ -69,11 +72,12 @@ import { FormsModule } from '@angular/forms';
     FieldsetModule,
     RatingModule,
     ProgressSpinnerModule,
+    ToastModule,
     MatButtonModule,
     MatIconModule,
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [MakeRequestService]
+  providers: [MakeRequestService, MessageService]
 })
 export class SharedModule { }

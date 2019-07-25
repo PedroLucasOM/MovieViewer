@@ -28,11 +28,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
-.spinner {
-  padding: 10%;
-  text-align: center;
-}
 .nota {
   margin-top: -10%;
 }

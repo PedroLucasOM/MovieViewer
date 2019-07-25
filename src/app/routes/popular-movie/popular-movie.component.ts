@@ -15,7 +15,6 @@ export class PopularMovieComponent implements OnInit {
 
   rating: number;
 
-  flagCarregando = false;
   flagPopularMovies = false;
   flagView = false;
   @Input() flagShowComponent = true;
@@ -29,12 +28,10 @@ export class PopularMovieComponent implements OnInit {
   }
 
   onFindAll() {
-    this.flagCarregando = true;
     this.flagPopularMovies = false;
     this.servicePopularMovieService.onFindPopularMovies().then(
       response => {
         this.movies = response;
-        this.flagCarregando = false;
         this.flagPopularMovies = true;
       }
     );

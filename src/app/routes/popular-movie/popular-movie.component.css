@@ -30,11 +30,6 @@
   transform: translateY(-50%);
   color: #212529;
 }
-
-.spinner {
-  padding: 10%;
-  text-align: center;
-}
 .nota {
   margin-top: -10%;
 }

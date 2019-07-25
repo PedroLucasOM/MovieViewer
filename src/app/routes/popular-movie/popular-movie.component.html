@@ -1,6 +1,6 @@
 <p-dialog [(visible)]="flagView" header="{{movie.title}} ({{movie.release_date | date: 'yyyy'}})" [modal]="true"
   [responsive]="true" [style]="{minWidth: '18rem', width: '60rem'}" [minY]="70" [baseZIndex]="10000">
-  <div style="width: 18rem; float: left;">
+  <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
     <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme">
   </div>
   <div style="width: 36rem; height: 28.5rem; float: right;">
@@ -52,9 +52,9 @@
           <drag-scroll style="width: 100%" [drag-scroll-disabled]="true" #nav>
             <div *ngFor="let movie of movies" class="inline">
               <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
-                (click)="onFindMovieByID(movie.id)">
-                <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
-                  alt="Capa do filme">
+                (click)="onFindMovieByID(movie.id)" *ngIf="movie.poster_path !== null">
+                  <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
+                    alt="Capa do filme">
                 <div class="card-footer">
                   <h5 class="card-title text" style="text-align: center; font-weight: bold;">{{movie.title}}</h5>
                 </div>

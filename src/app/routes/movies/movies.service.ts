@@ -15,7 +15,7 @@ export class MoviesService {
 
   onFindMovie(text: string) {
     return this.serviceMakeRequest.onMakeRequest(this.url + '?' + this.apiKey + '&' + this.language + '&query=' + text).then(
-      response => response as Movie[]
+      response => response.results as Movie[]
     );
   }
 }

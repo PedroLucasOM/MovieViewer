@@ -1,4 +1,4 @@
-<app-navbar (searchMoviesEvent)="onSendTextToMovies($event)"></app-navbar>
+<app-navbar (searchMoviesEvent)="onSendTextToMovies($event)" (returnHome)="onReturnHome($event)"></app-navbar>
 <div class="content">
   <app-popular-movie [flagShowComponent]="flagPopularGenres"></app-popular-movie>
   <app-genre-movie [flagShowComponent]="flagPopularGenres"></app-genre-movie>

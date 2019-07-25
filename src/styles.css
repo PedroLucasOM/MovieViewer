@@ -27,3 +27,13 @@
 .input-group {
   width: 100% !important;
 }
+
+.ui-panel-content {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.spinner {
+  padding: 10%;
+  text-align: center;
+}

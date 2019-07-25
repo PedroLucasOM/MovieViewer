@@ -1,0 +1,26 @@
+.content {
+  margin: 0 auto;
+  margin-top: 9vh;
+  margin-bottom: 7vh;
+}
+
+.card {
+  height: 100%;
+}
+
+.card :hover {
+  cursor: pointer;
+}
+
+.card-img-top {
+  height: 28rem;
+}
+
+.text {
+  font-size: 100%;
+}
+
+.text-title {
+  font-size: 150%;
+  font-weight: bold;
+}

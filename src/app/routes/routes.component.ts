@@ -19,9 +19,15 @@ export class RoutesComponent implements OnInit {
 
   onSendTextToMovies(text: string) {
     this.text = text;
-    console.log(text);
-    console.log(this.text);
     this.flagPopularGenres = false;
     this.flagMovies = true;
+  }
+
+  onReturnHome(flagReturnHome: boolean) {
+    if (flagReturnHome === true) {
+      this.text = '';
+      this.flagMovies = false;
+      this.flagPopularGenres = true;
+    }
   }
 }
