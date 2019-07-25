@@ -15,9 +15,11 @@
         <div class="ui-g ui-fluid">
           <div class="ui-g-7">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Pesquise">
+              <input type="text" class="form-control" placeholder="Pesquise" [(ngModel)]="text">
               <div class="input-group-prepend">
-                <div class="input-group-text" style="cursor: pointer;"><i class="fa fa-search"></i></div>
+                <div class="input-group-text" style="cursor: pointer; color: #212529;" (click)="onSearchMovies()">
+                  <i class="fa fa-search"></i>
+                </div>
               </div>
             </div>
           </div>

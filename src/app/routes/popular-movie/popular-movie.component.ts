@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Movie } from 'src/app/core/model';
 import { PopularMovieService } from './popular-movie.service';
 import { DragScrollComponent } from 'ngx-drag-scroll';
@@ -18,6 +18,7 @@ export class PopularMovieComponent implements OnInit {
   flagCarregando = false;
   flagPopularMovies = false;
   flagView = false;
+  @Input() flagShowComponent = true;
 
   @ViewChild('nav', {static: false}) ds: DragScrollComponent;
 
@@ -33,7 +34,6 @@ export class PopularMovieComponent implements OnInit {
     this.servicePopularMovieService.onFindPopularMovies().then(
       response => {
         this.movies = response;
-        console.log(this.movies);
         this.flagCarregando = false;
         this.flagPopularMovies = true;
       }

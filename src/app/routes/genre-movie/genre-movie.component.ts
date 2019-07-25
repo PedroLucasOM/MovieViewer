@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, Input } from '@angular/core';
 import { GenreMovieService } from './genre-movie.service';
 import { Genre, Movie } from 'src/app/core/model';
 import { DragScrollComponent } from 'ngx-drag-scroll';
@@ -13,8 +13,10 @@ export class GenreMovieComponent implements OnInit {
 
   data: Genre[];
   movie: Movie = new Movie();
+
   flagMoviesByGenre = false;
   flagView = false;
+  @Input() flagShowComponent = true;
 
   @ViewChildren('nav') dragScrolls: QueryList<DragScrollComponent>;
 
@@ -34,7 +36,6 @@ export class GenreMovieComponent implements OnInit {
     this.servicePopularMovieService.onFindMovie(id).then(
       response => {
         this.movie = response;
-        console.log(this.movie);
         this.flagView = true;
       }
     );

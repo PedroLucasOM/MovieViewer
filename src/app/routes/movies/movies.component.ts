@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MoviesService } from './movies.service';
+import { Movie } from 'src/app/core/model';
 
 @Component({
   selector: 'app-movies',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor() { }
+  movies: Movie[];
+
+  flagCarregando = false;
+  @Input() text: string;
+
+  @Input() flagShowComponent = false;
+
+  constructor(private serviceMovie: MoviesService) { }
 
   ngOnInit() {
+    this.onFindMovies();
+  }
+
+  onFindMovies() {
+    this.flagCarregando = true;
+    this.serviceMovie.onFindMovie(this.text).then(
+      response => {
+        this.movies = response;
+        this.flagCarregando = false;
+      }
+    );
   }
 
 }

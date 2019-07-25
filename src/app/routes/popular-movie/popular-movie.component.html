@@ -33,7 +33,7 @@
     </div>
   </div>
 </p-dialog>
-<div class="content">
+<div class="content" *ngIf="flagShowComponent === true">
   <div class="ui-g ui-fluid">
     <div class="ui-g-12 d-flex justify-content-center">
       <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft()">
@@ -48,7 +48,7 @@
             </button>
           </div>
         </p-header>
-        <div *ngIf="flagPopularMovies == true">
+        <div *ngIf="flagPopularMovies === true">
           <drag-scroll style="width: 100%" [drag-scroll-disabled]="true" #nav>
             <div *ngFor="let movie of movies" class="inline">
               <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
@@ -62,7 +62,7 @@
             </div>
           </drag-scroll>
         </div>
-        <div *ngIf="flagPopularMovies == false" class="spinner">
+        <div *ngIf="flagPopularMovies === false" class="spinner">
           <p-progressSpinner [style]="{width: '100px', height: '100px'}" strokeWidth="8" fill="#EEEEEE"
             animationDuration=".5s"></p-progressSpinner>
         </div>
