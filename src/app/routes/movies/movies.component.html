@@ -34,8 +34,8 @@
   </div>
 </p-dialog>
 <div class="content">
-  <div class="ui-g ui-fluid">
-    <div *ngIf="flagShowComponent === true && flagCarregando === false">
+  <div *ngIf="flagCarregando === false">
+    <div class="ui-g ui-fluid">
       <div *ngFor="let movie of movies">
         <div class="ui-g-4" *ngIf="movie.poster_path !== null">
           <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
@@ -48,7 +48,9 @@
         </div>
       </div>
     </div>
-    <div *ngIf="flagCarregando === true">
+  </div>
+  <div *ngIf="flagCarregando === true">
+    <div class="ui-g ui-fluid">
       <div class="ui-g-12">
         <div class="spinner">
           <p-progressSpinner [style]="{width: '100px', height: '100px'}" strokeWidth="8" fill="#EEEEEE"
