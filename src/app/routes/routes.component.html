@@ -2,7 +2,7 @@
   (diminuirFonte)="onDiminuirFonte()" (aumentarFonte)="onAumentarFonte()" (normalizarFonte)="onNormalizarFonte()"></app-navbar>
 <div class="content">
   <app-popular-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-popular-movie>
-  <app-genre-movie [flagShowComponent]="flagPopularGenres"></app-genre-movie>
+  <app-genre-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-genre-movie>
   <div *ngIf="flagMovies === true">
     <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"></app-movies>
   </div>

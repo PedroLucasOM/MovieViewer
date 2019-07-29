@@ -11,6 +11,9 @@ import { PopularMovieService } from '../popular-movie/popular-movie.service';
 })
 export class GenreMovieComponent implements OnInit {
 
+  @Input() fonte: string;
+  @Input() fonteTitulo: string;
+
   data: Genre[];
   movie: Movie = new Movie();
 
