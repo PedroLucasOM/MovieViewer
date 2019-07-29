@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from './movies/movies.service';
+import { Movie } from '../core/model';
 
 @Component({
   selector: 'app-routes',
@@ -7,25 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoutesComponent implements OnInit {
 
-  text: string;
+  movies: Movie[];
 
   flagPopularGenres = true;
   flagCarregandoMovies = false;
   flagMovies = false;
+  flagSearchMovies = false;
 
-  constructor() { }
+  constructor(private serviceMovie: MoviesService) { }
 
   ngOnInit() {}
 
-  onSendTextToMovies(text: string) {
-    this.text = text;
-    this.flagPopularGenres = false;
-    this.flagMovies = true;
+  onFindMovies(text: string) {
+    this.flagCarregandoMovies = true;
+    this.serviceMovie.onFindMovie(text).then(
+      response => {
+        this.movies = response;
+        this.flagCarregandoMovies = false;
+        this.flagPopularGenres = false;
+        this.flagMovies = true;
+        if (this.movies.length > 0) {
+          this.flagSearchMovies = true;
+        }
+      }
+    );
   }
 
   onReturnHome(flagReturnHome: boolean) {
     if (flagReturnHome === true) {
-      this.text = '';
+      this.flagCarregandoMovies = false;
+      this.flagSearchMovies = false;
       this.flagMovies = false;
       this.flagPopularGenres = true;
     }

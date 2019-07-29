@@ -1,3 +1,4 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
 <p-dialog [(visible)]="flagView" header="{{movie.title}} ({{movie.release_date | date: 'yyyy'}})" [modal]="true"
   [responsive]="true" [style]="{minWidth: '18rem', width: '60rem'}" [minY]="70" [baseZIndex]="10000">
   <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
@@ -34,7 +35,7 @@
   </div>
 </p-dialog>
 <div class="content">
-  <div *ngIf="flagCarregando === false">
+  <div *ngIf="flagCarregando === false && flagSearchMovies === true">
     <div class="ui-g ui-fluid">
       <div *ngFor="let movie of movies">
         <div class="ui-g-4" *ngIf="movie.poster_path !== null">
@@ -44,6 +45,17 @@
             <div class="card-footer">
               <h5 class="card-title text" style="text-align: center; font-weight: bold;">{{movie.title}}</h5>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="flagSearchMovies === false && flagCarregando === false">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12">
+        <div class="spinner">
+          <div class="alert alert-light text" role="alert">
+            Nenhum filme encontrado com este título!
           </div>
         </div>
       </div>

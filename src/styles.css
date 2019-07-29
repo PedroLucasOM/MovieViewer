@@ -1,5 +1,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+body, html {
+  min-height: 100%;
+}
+
 .space-right {
   margin-right: .25em !important;
 }
@@ -34,6 +38,6 @@
 }
 
 .spinner {
-  padding: 10%;
+  padding: 22%;
   text-align: center;
 }

@@ -1,8 +1,8 @@
-<app-navbar (searchMoviesEvent)="onSendTextToMovies($event)" (returnHome)="onReturnHome($event)"></app-navbar>
+<app-navbar (searchMoviesEvent)="onFindMovies($event)" (returnHome)="onReturnHome($event)"></app-navbar>
 <div class="content">
   <app-popular-movie [flagShowComponent]="flagPopularGenres"></app-popular-movie>
   <app-genre-movie [flagShowComponent]="flagPopularGenres"></app-genre-movie>
   <div *ngIf="flagMovies === true">
-    <app-movies [flagShowComponent]="flagMovies" [text]="text"></app-movies>
+    <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"></app-movies>
   </div>
 </div>
