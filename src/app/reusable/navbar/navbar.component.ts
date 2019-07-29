@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
     if (this.text && this.text.trim()) {
       this.searchMoviesEvent.emit(this.text);
     } else {
-      this.messageService.add({severity: 'warn', summary: 'Texto vazio', detail: 'Preencha o campo de pesquisa!'});
+      this.messageService.add({severity: 'warn', summary: 'Texto não pode ser vazio', detail: 'Preencha o campo de pesquisa!'});
     }
   }
 
