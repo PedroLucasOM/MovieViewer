@@ -4,10 +4,10 @@
     <div class="ui-g-6">
       <div class="ui-g ui-fluid">
         <div class="ui-g-3">
-          <h3 class="title" style="cursor: pointer;" (click)="onReturnHome()">MovieViewer</h3>
+          <h3 class="title" style="cursor: pointer;white-space: normal;" (click)="onReturnHome()" [ngStyle]="{'font-size': fonteTitulo+'%'}">MovieViewer</h3>
         </div>
         <div class="ui-g-1">
-          <a href="javascript:;" class="navbar-toggle"><i class="fa fa-bars"></i></a>
+          <a href="javascript:;" class="navbar-toggle" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-bars"></i></a>
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
         <div class="ui-g ui-fluid">
           <div class="ui-g-7">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Pesquise" [(ngModel)]="text">
+              <input type="text" class="form-control" placeholder="Pesquise" [(ngModel)]="text" [ngStyle]="{'font-size': fonte+'%'}">
               <div class="input-group-prepend">
                 <div class="input-group-text" style="cursor: pointer; color: #212529;" (click)="onSearchMovies()">
                   <i class="fa fa-search"></i>
@@ -26,10 +26,10 @@
           </div>
           <div class="ui-g-2"></div>
           <div class="btn-group ui-g-3 ui-fluid" role="group">
-            <button type="button" class="btn btn-light"><i class="fa fa-adjust"></i></button>
-            <button type="button" class="btn btn-light" (click)="onDiminuirFonte()"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-light" (click)="onNormalizarFonte()"><i class="fa fa-font"></i></button>
-            <button type="button" class="btn btn-light" (click)="onAumentarFonte()"><i class="fa fa-plus"></i></button>
+            <button type="button" class="btn btn-light" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-adjust"></i></button>
+            <button type="button" class="btn btn-light" (click)="onDiminuirFonte()" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-light" (click)="onNormalizarFonte()" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-font"></i></button>
+            <button type="button" class="btn btn-light" (click)="onAumentarFonte()" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-plus"></i></button>
           </div>
         </div>
       </div>

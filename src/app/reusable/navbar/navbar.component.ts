@@ -8,6 +8,9 @@ import { MessageService } from 'primeng/components/common/messageservice';
 })
 export class NavbarComponent implements OnInit {
 
+  fonte = 100;
+  fonteTitulo = 150;
+
   text: string;
   flagReturnHome = false;
   @Output() searchMoviesEvent = new EventEmitter();
@@ -37,14 +40,20 @@ export class NavbarComponent implements OnInit {
   }
 
   onDiminuirFonte() {
+    this.fonte = this.fonte - 10;
+    this.fonteTitulo = this.fonteTitulo - 10;
     this.diminuirFonte.emit();
   }
 
   onAumentarFonte() {
+    this.fonte = this.fonte + 10;
+    this.fonteTitulo = this.fonteTitulo + 10;
     this.aumentarFonte.emit();
   }
 
   onNormalizarFonte() {
+    this.fonte = 100;
+    this.fonteTitulo = 150;
     this.normalizarFonte.emit();
   }
 
