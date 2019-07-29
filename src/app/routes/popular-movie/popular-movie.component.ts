@@ -10,6 +10,9 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 })
 export class PopularMovieComponent implements OnInit {
 
+  @Input() fonte: string;
+  @Input() fonteTitulo: string;
+
   movie: Movie = new Movie();
   movies: Movie[];
 

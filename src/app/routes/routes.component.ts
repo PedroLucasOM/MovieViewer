@@ -9,6 +9,9 @@ import { Movie } from '../core/model';
 })
 export class RoutesComponent implements OnInit {
 
+  fonte = 100;
+  fonteTitulo = 150;
+
   movies: Movie[];
 
   flagPopularGenres = true;
@@ -42,5 +45,20 @@ export class RoutesComponent implements OnInit {
       this.flagMovies = false;
       this.flagPopularGenres = true;
     }
+  }
+
+  onAumentarFonte() {
+    this.fonte = this.fonte + 10;
+    this.fonteTitulo = this.fonteTitulo + 10;
+  }
+
+  onDiminuirFonte() {
+    this.fonte = this.fonte - 10;
+    this.fonteTitulo = this.fonteTitulo - 10;
+  }
+
+  onNormalizarFonte() {
+    this.fonte = 100;
+    this.fonteTitulo = 150;
   }
 }

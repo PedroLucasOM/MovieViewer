@@ -1,6 +1,7 @@
-<app-navbar (searchMoviesEvent)="onFindMovies($event)" (returnHome)="onReturnHome($event)"></app-navbar>
+<app-navbar (searchMoviesEvent)="onFindMovies($event)" (returnHome)="onReturnHome($event)"
+  (diminuirFonte)="onDiminuirFonte()" (aumentarFonte)="onAumentarFonte()" (normalizarFonte)="onNormalizarFonte()"></app-navbar>
 <div class="content">
-  <app-popular-movie [flagShowComponent]="flagPopularGenres"></app-popular-movie>
+  <app-popular-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-popular-movie>
   <app-genre-movie [flagShowComponent]="flagPopularGenres"></app-genre-movie>
   <div *ngIf="flagMovies === true">
     <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"></app-movies>

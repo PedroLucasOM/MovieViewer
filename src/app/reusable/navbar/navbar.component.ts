@@ -13,6 +13,10 @@ export class NavbarComponent implements OnInit {
   @Output() searchMoviesEvent = new EventEmitter();
   @Output() returnHome = new EventEmitter();
 
+  @Output() diminuirFonte = new EventEmitter();
+  @Output() aumentarFonte = new EventEmitter();
+  @Output() normalizarFonte = new EventEmitter();
+
   constructor(private messageService: MessageService) { }
 
   ngOnInit() {
@@ -30,6 +34,18 @@ export class NavbarComponent implements OnInit {
     this.text = '';
     this.flagReturnHome = true;
     this.returnHome.emit(this.flagReturnHome);
+  }
+
+  onDiminuirFonte() {
+    this.diminuirFonte.emit();
+  }
+
+  onAumentarFonte() {
+    this.aumentarFonte.emit();
+  }
+
+  onNormalizarFonte() {
+    this.normalizarFonte.emit();
   }
 
 }
