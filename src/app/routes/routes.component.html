@@ -4,6 +4,7 @@
   <app-popular-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-popular-movie>
   <app-genre-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-genre-movie>
   <div *ngIf="flagMovies === true">
-    <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"></app-movies>
+    <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"
+      [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-movies>
   </div>
 </div>

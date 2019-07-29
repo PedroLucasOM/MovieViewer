@@ -9,6 +9,9 @@ import { PopularMovieService } from '../popular-movie/popular-movie.service';
 })
 export class MoviesComponent implements OnInit {
 
+  @Input() fonte: string;
+  @Input() fonteTitulo: string;
+
   @Input() movies: Movie[];
   movie = new Movie();
 
