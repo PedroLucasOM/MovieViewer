@@ -49,7 +49,7 @@
           <div class="ui-helper-clearfix">
             <span class="ui-panel-title text-title" style="display:inline-block;margin-top:4px"
               [ngStyle]="{'font-size': fonteTitulo+'%'}">Populares</span>
-            <button mat-icon-button style="float: right;" (click)="onFindAll()">
+            <button mat-icon-button style="float: right;" (click)="onFindAll()" alt="Botão para mostrar filmes anteriores">
               <mat-icon>autorenew</mat-icon>
             </button>
           </div>
@@ -60,7 +60,7 @@
               <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
                 (click)="onFindMovieByID(movie.id)" *ngIf="movie.poster_path !== null">
                 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
-                  alt="Capa do filme">
+                  alt="Capa do filme {{movie.title}}">
                 <div class="card-footer">
                   <h5 class="card-title" style="text-align: center; font-weight: bold; white-space: normal;"
                     [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}}</h5>
@@ -74,7 +74,7 @@
             animationDuration=".5s"></p-progressSpinner>
         </div>
       </p-panel>
-      <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()">
+      <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()" alt="Botão para mostrar filmes posteriores">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
