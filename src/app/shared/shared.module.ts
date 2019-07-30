@@ -29,10 +29,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { AltoContrasteDirective } from './directives/alto-contraste.directive';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [AltoContrasteDirective],
   imports: [
     BrowserAnimationsModule,
     CommonModule,
@@ -79,7 +80,8 @@ import { MessageService } from 'primeng/components/common/messageservice';
     MatIconModule,
     FontAwesomeModule,
     FormsModule,
-    TooltipModule
+    TooltipModule,
+    AltoContrasteDirective
   ],
   providers: [MakeRequestService, MessageService]
 })

@@ -1,5 +1,5 @@
 <p-toast [style]="{marginTop: '80px'}"></p-toast>
-<nav class="navbar">
+<nav class="navbar" appAltoContraste [flagAltoContraste]="flagAltoContraste">
   <div class="ui-g" style="width: 100%;">
     <div class="ui-g-6">
       <div class="ui-g ui-fluid">
@@ -13,9 +13,9 @@
         <div class="ui-g ui-fluid">
           <div class="ui-g-7">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Pesquise filmes por título" [(ngModel)]="text" [ngStyle]="{'font-size': fonte+'%'}">
+              <input appAltoContraste [flagAltoContraste]="flagAltoContraste" type="text" class="form-control" placeholder="Pesquise filmes por título" [(ngModel)]="text" [ngStyle]="{'font-size': fonte+'%'}">
               <div class="input-group-prepend">
-                <div class="input-group-text" style="cursor: pointer; color: #212529;" (click)="onSearchMovies()">
+                <div class="input-group-text" style="cursor: pointer; color: #212529;" (click)="onSearchMovies()" appAltoContraste [flagAltoContraste]="flagAltoContraste">
                   <i class="fa fa-search"></i>
                 </div>
               </div>
@@ -23,13 +23,13 @@
           </div>
           <div class="ui-g-2"></div>
           <div class="btn-group ui-g-3 ui-fluid" role="group">
-            <button type="button" class="btn btn-light" [ngStyle]="{'font-size': fonte+'%'}"
+            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light" (click)="onAltoContraste()" [ngStyle]="{'font-size': fonte+'%'}"
               aria-label="Ativar alto contraste"><i class="fa fa-adjust"></i></button>
-            <button type="button" class="btn btn-light" (click)="onDiminuirFonte()" [ngStyle]="{'font-size': fonte+'%'}"
+            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light" (click)="onDiminuirFonte()" [ngStyle]="{'font-size': fonte+'%'}"
               aria-label="Diminuir fonte"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-light" (click)="onNormalizarFonte()" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-font"
+            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light" (click)="onNormalizarFonte()" [ngStyle]="{'font-size': fonte+'%'}"><i class="fa fa-font"
               aria-label="Normalizar fonte"></i></button>
-            <button type="button" class="btn btn-light" (click)="onAumentarFonte()" [ngStyle]="{'font-size': fonte+'%'}"
+            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light" (click)="onAumentarFonte()" [ngStyle]="{'font-size': fonte+'%'}"
               aria-label="Aumentar fonte"><i class="fa fa-plus"></i></button>
           </div>
         </div>

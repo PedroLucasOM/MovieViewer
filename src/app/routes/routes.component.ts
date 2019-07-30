@@ -11,6 +11,7 @@ export class RoutesComponent implements OnInit {
 
   fonte = 100;
   fonteTitulo = 150;
+  flagAltoContraste = false;
 
   movies: Movie[];
 
@@ -60,5 +61,9 @@ export class RoutesComponent implements OnInit {
   onNormalizarFonte() {
     this.fonte = 100;
     this.fonteTitulo = 150;
+  }
+
+  onAltoContraste(flagAltoContraste: boolean) {
+    this.flagAltoContraste = flagAltoContraste;
   }
 }

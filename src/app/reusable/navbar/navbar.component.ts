@@ -10,12 +10,14 @@ export class NavbarComponent implements OnInit {
 
   fonte = 100;
   fonteTitulo = 150;
+  flagAltoContraste = false;
 
   text: string;
   flagReturnHome = false;
   @Output() searchMoviesEvent = new EventEmitter();
   @Output() returnHome = new EventEmitter();
 
+  @Output() altoContraste = new EventEmitter();
   @Output() diminuirFonte = new EventEmitter();
   @Output() aumentarFonte = new EventEmitter();
   @Output() normalizarFonte = new EventEmitter();
@@ -55,6 +57,11 @@ export class NavbarComponent implements OnInit {
     this.fonte = 100;
     this.fonteTitulo = 150;
     this.normalizarFonte.emit();
+  }
+
+  onAltoContraste() {
+    this.flagAltoContraste = !this.flagAltoContraste;
+    this.altoContraste.emit(this.flagAltoContraste);
   }
 
 }

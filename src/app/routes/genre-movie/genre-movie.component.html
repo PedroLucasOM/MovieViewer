@@ -1,37 +1,37 @@
 <p-dialog [(visible)]="flagView" [modal]="true" [responsive]="true" [style]="{minWidth: '18rem', width: '60rem'}"
-  [minY]="70" [baseZIndex]="10000">
-  <p-header [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}} ({{movie.release_date | date: 'yyyy'}})</p-header>
-  <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
+  [minY]="70" [baseZIndex]="10000" appAltoContraste>
+  <p-header appAltoContraste [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}} ({{movie.release_date | date: 'yyyy'}})</p-header>
+  <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null" appAltoContraste>
     <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme {{movie.title}}">
   </div>
-  <div style="width: 36rem; height: 28.5rem; float: right;">
-    <p-fieldset>
-      <p-header [ngStyle]="{'font-size': fonte+'%'}">Descrição</p-header>
-      <p-scrollPanel [style]="{width: '100%', height: '13rem'}" styleClass="custom">
-        <div class="text" style="padding:1em;line-height:1.5;text-align: justify;" [ngStyle]="{'font-size': fonte+'%'}">
+  <div style="width: 36rem; height: 28.5rem; float: right;" appAltoContraste>
+    <p-fieldset appAltoContraste>
+      <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Descrição</p-header>
+      <p-scrollPanel [style]="{width: '100%', height: '13rem'}" styleClass="custom" appAltoContraste>
+        <div class="text" style="padding:1em;line-height:1.5;text-align: justify;" [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>
           {{movie.overview}}
         </div>
       </p-scrollPanel>
     </p-fieldset>
     <div class="ui-g">
       <div class="ui-g-4">
-        <p-fieldset [style]="{height: '9rem'}">
-          <p-header [ngStyle]="{'font-size': fonte+'%'}">Alcance</p-header>
-          <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}">{{movie.popularity}}</h5>
+        <p-fieldset [style]="{height: '9rem'}" appAltoContraste>
+          <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Alcance</p-header>
+          <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>{{movie.popularity}}</h5>
         </p-fieldset>
       </div>
       <div class="ui-g-4">
-        <p-fieldset [style]="{height: '9rem'}">
-          <p-header [ngStyle]="{'font-size': fonte+'%'}">Votos</p-header>
-          <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}">{{movie.vote_count}}</h5>
+        <p-fieldset [style]="{height: '9rem'}" appAltoContraste>
+          <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Votos</p-header>
+          <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>{{movie.vote_count}}</h5>
         </p-fieldset>
       </div>
       <div class="ui-g-4">
-        <p-fieldset [style]="{height: '9rem'}">
-          <p-header [ngStyle]="{'font-size': fonte+'%'}">Nota</p-header>
-          <div class="center nota">
-            <label class="text-title" [ngStyle]="{'font-size': fonteTitulo+'%'}">{{movie.vote_average}}</label>
-            <p-rating [ngModel]="movie.vote_average/2" readonly="true" stars="5" [cancel]="false"></p-rating>
+        <p-fieldset [style]="{height: '9rem'}" appAltoContraste>
+          <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Nota</p-header>
+          <div class="center nota" appAltoContraste>
+            <label class="text-title" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>{{movie.vote_average}}</label>
+            <p-rating [ngModel]="movie.vote_average/2" readonly="true" stars="5" [cancel]="false" appAltoContraste></p-rating>
           </div>
         </p-fieldset>
       </div>
@@ -43,14 +43,14 @@
     <div class="content">
       <div class="ui-g ui-fluid">
         <div class="ui-g-12 d-flex justify-content-center">
-          <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft(dataObject)">
+          <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft(dataObject)" appAltoContraste>
             <mat-icon>keyboard_arrow_left</mat-icon>
           </button>
           <p-panel [style]="{'margin-bottom':'20px'}" class="ui-g-10">
-            <p-header>
-              <div class="ui-helper-clearfix">
+            <p-header appAltoContraste>
+              <div class="ui-helper-clearfix" appAltoContraste>
                 <span class="ui-panel-title text-title" style="display:inline-block;margin-top:4px"
-                  [ngStyle]="{'font-size': fonteTitulo+'%'}">{{dataObject.name}}</span>
+                  [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>{{dataObject.name}}</span>
               </div>
             </p-header>
             <div *ngIf="flagMoviesByGenre == true">
@@ -58,7 +58,7 @@
                 <div *ngFor="let movie of dataObject.movies" class="inline">
                   <div *ngIf="movie.poster_path !== null">
                     <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
-                      (click)="onFindMovieByID(movie.id)">
+                      (click)="onFindMovieByID(movie.id)" appAltoContraste>
                       <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                         alt="Capa do filme {{movie.title}} - clique para ver detalhes">
                       <div class="card-footer">
@@ -75,7 +75,7 @@
                 animationDuration=".5s"></p-progressSpinner>
             </div>
           </p-panel>
-          <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight(dataObject)">
+          <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight(dataObject)" appAltoContraste>
             <mat-icon>keyboard_arrow_right</mat-icon>
           </button>
         </div>

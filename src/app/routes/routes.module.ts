@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GenreMovieModule } from './genre-movie/genre-movie.module';
 import { RoutesComponent } from './routes.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -15,7 +16,8 @@ import { RoutesComponent } from './routes.component';
     PopularMovieModule,
     GenreMovieModule,
     MoviesModule,
-    NavbarModule
+    NavbarModule,
+    SharedModule
   ],
   exports: [
     RoutesComponent,
