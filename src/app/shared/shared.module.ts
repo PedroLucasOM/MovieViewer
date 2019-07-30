@@ -19,6 +19,7 @@ import {DialogModule} from 'primeng/dialog';
 import {FieldsetModule} from 'primeng/fieldset';
 import {RatingModule} from 'primeng/rating';
 import {ToastModule} from 'primeng/toast';
+import {TooltipModule} from 'primeng/tooltip';
 
 import { DragScrollModule } from 'ngx-drag-scroll';
 
@@ -53,7 +54,8 @@ import { MessageService } from 'primeng/components/common/messageservice';
     MatButtonModule,
     MatIconModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    TooltipModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -76,7 +78,8 @@ import { MessageService } from 'primeng/components/common/messageservice';
     MatButtonModule,
     MatIconModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    TooltipModule
   ],
   providers: [MakeRequestService, MessageService]
 })

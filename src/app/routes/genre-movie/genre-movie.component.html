@@ -2,7 +2,7 @@
   [minY]="70" [baseZIndex]="10000">
   <p-header [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}} ({{movie.release_date | date: 'yyyy'}})</p-header>
   <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
-    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme">
+    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme {{movie.title}}">
   </div>
   <div style="width: 36rem; height: 28.5rem; float: right;">
     <p-fieldset>
@@ -60,7 +60,7 @@
                     <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
                       (click)="onFindMovieByID(movie.id)">
                       <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
-                        alt="Capa do filme">
+                        alt="Capa do filme {{movie.title}} - clique para ver detalhes">
                       <div class="card-footer">
                         <h5 class="card-title" [ngStyle]="{'font-size': fonte+'%'}"
                           style="text-align: center; font-weight: bold;white-space: normal;">{{movie.title}}</h5>
