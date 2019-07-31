@@ -68,14 +68,14 @@
             <div *ngIf="flagMoviesByGenre == true">
               <drag-scroll style="width: 100%" [drag-scroll-disabled]="true" #nav>
                 <div *ngFor="let movie of dataObject.movies" class="inline">
-                  <div *ngIf="movie.poster_path !== null">
+                  <div *ngIf="movie.poster_path !== null" class="inline">
                     <div class="card" style="width: 18rem; height: 100%;" drag-scroll-item data-toggle="modal"
                       (click)="onFindMovieByID(movie.id)" appAltoContraste [flagAltoContraste]="flagAltoContraste">
                       <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                         alt="Capa do filme {{movie.title}} - clique para ver detalhes">
                       <div class="card-footer">
                         <h5 class="card-title" [ngStyle]="{'font-size': fonte+'%'}"
-                          style="text-align: center; font-weight: bold;white-space: normal;">{{movie.title}}</h5>
+                          style="text-align: center; font-weight: bold;white-space: normal">{{movie.title}}</h5>
                       </div>
                     </div>
                   </div>

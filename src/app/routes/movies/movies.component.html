@@ -3,7 +3,8 @@
   [minY]="70" [baseZIndex]="10000">
   <p-header [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}} ({{movie.release_date | date: 'yyyy'}})</p-header>
   <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
-    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme {{movie.title}}">
+    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
+      alt="Capa do filme {{movie.title}}">
   </div>
   <div style="width: 36rem; height: 28.5rem; float: right;">
     <p-fieldset>
@@ -44,12 +45,15 @@
     <div class="ui-g ui-fluid">
       <div *ngFor="let movie of movies">
         <div class="ui-g-4" *ngIf="movie.poster_path !== null">
-          <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
-            (click)="onFindMovieByID(movie.id)">
-            <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme {{movie.title}} - clique para ver detalhes">
-            <div class="card-footer">
+          <div class="card inline" style="width: 18rem;height: 100%;" drag-scroll-item data-toggle="modal"
+            (click)="onFindMovieByID(movie.id)" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+            <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
+              alt="Capa do filme {{movie.title}} - clique para ver detalhes" appAltoContraste
+              [flagAltoContraste]="flagAltoContraste">
+            <div class="card-footer" appAltoContraste [flagAltoContraste]="flagAltoContraste">
               <h5 class="card-title text" style="text-align: center; font-weight: bold;"
-                [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}}</h5>
+                [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+                {{movie.title}}</h5>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@
 
 .card {
   height: 100%;
+  box-sizing: border-box;
 }
 
 .card :hover {
@@ -23,4 +24,9 @@
 .text-title {
   font-size: 150%;
   font-weight: bold;
+}
+
+.card-footer {
+  min-height: 75px;
+  height: auto;
 }

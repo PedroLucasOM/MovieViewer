@@ -11,6 +11,7 @@ export class MoviesComponent implements OnInit {
 
   @Input() fonte: string;
   @Input() fonteTitulo: string;
+  @Input() flagAltoContraste = false;
 
   @Input() movies: Movie[];
   movie = new Movie();
