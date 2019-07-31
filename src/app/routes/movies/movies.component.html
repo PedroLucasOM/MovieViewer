@@ -63,8 +63,8 @@
   <div *ngIf="flagSearchMovies === false && flagCarregando === false">
     <div class="ui-g ui-fluid">
       <div class="ui-g-12">
-        <div class="spinner">
-          <div class="alert alert-light text" role="alert" [ngStyle]="{'font-size': fonte+'%'}">
+        <div class="spinner" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+          <div class="alert alert-light text-title" role="alert" [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
             Nenhum filme encontrado com este título!
           </div>
         </div>
