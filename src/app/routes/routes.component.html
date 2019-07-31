@@ -1,11 +1,13 @@
 <app-navbar (searchMoviesEvent)="onFindMovies($event)" (returnHome)="onReturnHome($event)"
   (diminuirFonte)="onDiminuirFonte()" (aumentarFonte)="onAumentarFonte()" (normalizarFonte)="onNormalizarFonte()"
-    (altoContraste)="onAltoContraste()"></app-navbar>
-<div class="content" appAltoContraste>
-  <app-popular-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-popular-movie>
-  <app-genre-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-genre-movie>
-  <div *ngIf="flagMovies === true">
-    <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"
-      [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-movies>
+    (altoContraste)="onAltoContraste($event)"></app-navbar>
+<div class="body" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+  <div class="content" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+    <app-popular-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo" [flagAltoContraste]="flagAltoContraste"></app-popular-movie>
+    <app-genre-movie [flagShowComponent]="flagPopularGenres" [fonte]="fonte" [fonteTitulo]="fonteTitulo" [flagAltoContraste]="flagAltoContraste"></app-genre-movie>
+    <div *ngIf="flagMovies === true">
+      <app-movies [flagSearchMovies]="flagSearchMovies" [movies]="movies" [flagCarregando]="flagCarregandoMovies"
+        [fonte]="fonte" [fonteTitulo]="fonteTitulo"></app-movies>
+    </div>
   </div>
 </div>

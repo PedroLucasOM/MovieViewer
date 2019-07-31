@@ -1,8 +1,9 @@
-<p-dialog [(visible)]="flagView" [modal]="true"
-  [responsive]="true" [style]="{minWidth: '18rem', width: '60rem'}" [minY]="70" [baseZIndex]="10000">
+<p-dialog [(visible)]="flagView" [modal]="true" [responsive]="true" [style]="{minWidth: '18rem', width: '60rem'}"
+  [minY]="70" [baseZIndex]="10000">
   <p-header [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}} ({{movie.release_date | date: 'yyyy'}})</p-header>
   <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
-    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Capa do filme {{movie.title}}">
+    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
+      alt="Capa do filme {{movie.title}}">
   </div>
   <div style="width: 36rem; height: 28.5rem; float: right;">
     <p-fieldset>
@@ -41,42 +42,45 @@
 <div class="content" *ngIf="flagShowComponent === true">
   <div class="ui-g ui-fluid">
     <div class="ui-g-12 d-flex justify-content-center">
-      <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft()" appAltoContraste>
+      <div class="ui-g-11" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+        <div class="panel-header text-title" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+          <span [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste
+            [flagAltoContraste]="flagAltoContraste">Populares</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12 d-flex justify-content-center">
+      <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft()" appAltoContraste
+        [flagAltoContraste]="flagAltoContraste">
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
-      <p-panel [style]="{'margin-bottom':'20px'}" class="ui-g-10">
-        <p-header appAltoContraste>
-          <div class="ui-helper-clearfix" appAltoContraste>
-            <span class="ui-panel-title text-title" style="display:inline-block;margin-top:4px"
-              [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>Populares</span>
-            <button mat-icon-button style="float: right;" (click)="onFindAll()" alt="Botão para mostrar filmes anteriores" appAltoContraste>
-              <mat-icon>autorenew</mat-icon>
-            </button>
-          </div>
-        </p-header>
+      <div class="panel-body ui-g-10">
         <div *ngIf="flagPopularMovies === true">
           <drag-scroll style="width: 100%" [drag-scroll-disabled]="true" #nav>
             <div *ngFor="let movie of movies" class="inline">
-              <div class="card" style="width: 18rem;" drag-scroll-item data-toggle="modal"
-                (click)="onFindMovieByID(movie.id)" *ngIf="movie.poster_path !== null" appAltoContraste>
+              <div class="card" style="width: 18rem;height: 100%;" drag-scroll-item data-toggle="modal"
+                (click)="onFindMovieByID(movie.id)" *ngIf="movie.poster_path !== null" appAltoContraste
+                [flagAltoContraste]="flagAltoContraste">
                 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                   alt="Capa do filme {{movie.title}} - Clique para ver detalhes">
                 <div class="card-footer">
-                  <h5 class="card-title" style="text-align: center; font-weight: bold; white-space: normal;"
+                  <h5 class="card-title" style="text-align: center; font-weight: bold; white-space: normal"
                     [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}}</h5>
                 </div>
               </div>
             </div>
           </drag-scroll>
+          <div *ngIf="flagPopularMovies === false" class="spinner">
+            <p-progressSpinner [style]="{width: '100px', height: '100px'}" strokeWidth="8" fill="#EEEEEE"
+              animationDuration=".5s"></p-progressSpinner>
+          </div>
         </div>
-        <div *ngIf="flagPopularMovies === false" class="spinner">
-          <p-progressSpinner [style]="{width: '100px', height: '100px'}" strokeWidth="8" fill="#EEEEEE"
-            animationDuration=".5s"></p-progressSpinner>
-        </div>
-      </p-panel>
-      <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()" alt="Botão para mostrar filmes posteriores" appAltoContraste>
+      </div>
+      <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()" alt="Botão para mostrar filmes posteriores"
+        appAltoContraste [flagAltoContraste]="flagAltoContraste">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
   </div>
-</div>

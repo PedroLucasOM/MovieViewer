@@ -12,6 +12,7 @@ export class PopularMovieComponent implements OnInit {
 
   @Input() fonte: string;
   @Input() fonteTitulo: string;
+  @Input() flagAltoContraste = false;
 
   movie: Movie = new Movie();
   movies: Movie[];

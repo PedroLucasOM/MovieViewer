@@ -13,6 +13,7 @@ export class GenreMovieComponent implements OnInit {
 
   @Input() fonte: string;
   @Input() fonteTitulo: string;
+  @Input() flagAltoContraste = false;
 
   data: Genre[];
   movie: Movie = new Movie();
