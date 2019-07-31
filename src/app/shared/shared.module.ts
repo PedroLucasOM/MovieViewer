@@ -3,6 +3,7 @@ import { MakeRequestService } from './request/make-request.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // PRIMENG
 import {ToolbarModule} from 'primeng/toolbar';
@@ -19,7 +20,6 @@ import {DialogModule} from 'primeng/dialog';
 import {FieldsetModule} from 'primeng/fieldset';
 import {RatingModule} from 'primeng/rating';
 import {ToastModule} from 'primeng/toast';
-import {TooltipModule} from 'primeng/tooltip';
 
 import { DragScrollModule } from 'ngx-drag-scroll';
 
@@ -56,7 +56,7 @@ import { AltoContrasteDirective } from './directives/alto-contraste.directive';
     MatIconModule,
     FontAwesomeModule,
     FormsModule,
-    TooltipModule
+    NgbModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -80,8 +80,8 @@ import { AltoContrasteDirective } from './directives/alto-contraste.directive';
     MatIconModule,
     FontAwesomeModule,
     FormsModule,
-    TooltipModule,
-    AltoContrasteDirective
+    AltoContrasteDirective,
+    NgbModule
   ],
   providers: [MakeRequestService, MessageService]
 })

@@ -41,3 +41,8 @@
   min-height: 75px;
   height: auto;
 }
+
+.modal-content {
+  min-width: 18rem !important;
+  width: 60rem !important;
+}
