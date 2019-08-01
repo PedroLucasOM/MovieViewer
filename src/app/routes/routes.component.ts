@@ -33,7 +33,7 @@ export class RoutesComponent implements OnInit {
         this.flagPopularGenres = false;
         this.flagMovies = true;
         if (this.movies.length > 0) {
-          this.flagSearchMovies = false;
+          this.flagSearchMovies = true;
         }
       }
     );

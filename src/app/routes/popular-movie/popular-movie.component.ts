@@ -11,6 +11,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PopularMovieComponent implements OnInit {
 
+  constructor(private servicePopularMovieService: PopularMovieService, private modalService: NgbModal) { }
+
   @Input() fonte: string;
   @Input() fonteTitulo: string;
   @Input() flagAltoContraste = false;
@@ -27,7 +29,6 @@ export class PopularMovieComponent implements OnInit {
 
   @ViewChild('nav', { static: false }) ds: DragScrollComponent;
 
-  constructor(private servicePopularMovieService: PopularMovieService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.onFindAll();

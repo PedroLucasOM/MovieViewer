@@ -41,3 +41,7 @@ body, html {
   padding: 22%;
   text-align: center;
 }
+
+.ui-fieldset {
+  background-color: transparent !important;
+}

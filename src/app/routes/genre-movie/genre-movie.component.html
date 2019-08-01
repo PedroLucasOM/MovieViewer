@@ -1,50 +1,63 @@
-<p-dialog [(visible)]="flagView" [modal]="true" [responsive]="true" [style]="{minWidth: '18rem', width: '60rem'}"
-  [minY]="70" [baseZIndex]="10000" appAltoContraste>
-  <p-header appAltoContraste [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}}
-    ({{movie.release_date | date: 'yyyy'}})</p-header>
-  <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null" appAltoContraste>
-    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
-      alt="Capa do filme {{movie.title}}">
+<ng-template #content let-modal>
+  <div class="modal-header" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+    <h4 class="modal-title" id="modal-basic-title" appAltoContraste [flagAltoContraste]="flagAltoContraste"
+      [ngStyle]="{'font-size': fonteTitulo+'%'}">
+      {{movie.title}} ({{movie.release_date | date: 'yyyy'}})</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')" appAltoContraste
+      [flagAltoContraste]="flagAltoContraste">
+      <span aria-hidden="true" appAltoContraste [flagAltoContraste]="flagAltoContraste">&times;</span>
+    </button>
   </div>
-  <div style="width: 36rem; height: 28.5rem; float: right;" appAltoContraste>
-    <p-fieldset appAltoContraste>
-      <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Descrição</p-header>
-      <p-scrollPanel [style]="{width: '100%', height: '13rem'}" styleClass="custom" appAltoContraste>
-        <div class="text" style="padding:1em;line-height:1.5;text-align: justify;" [ngStyle]="{'font-size': fonte+'%'}"
-          appAltoContraste>
-          {{movie.overview}}
-        </div>
-      </p-scrollPanel>
-    </p-fieldset>
-    <div class="ui-g">
-      <div class="ui-g-4">
-        <p-fieldset [style]="{height: '9rem'}" appAltoContraste>
-          <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Alcance</p-header>
-          <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>
-            {{movie.popularity}}</h5>
-        </p-fieldset>
-      </div>
-      <div class="ui-g-4">
-        <p-fieldset [style]="{height: '9rem'}" appAltoContraste>
-          <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Votos</p-header>
-          <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste>
-            {{movie.vote_count}}</h5>
-        </p-fieldset>
-      </div>
-      <div class="ui-g-4">
-        <p-fieldset [style]="{height: '9rem'}" appAltoContraste>
-          <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste>Nota</p-header>
-          <div class="center nota" appAltoContraste>
-            <label class="text-title" [ngStyle]="{'font-size': fonteTitulo+'%'}"
-              appAltoContraste>{{movie.vote_average}}</label>
-            <p-rating [ngModel]="movie.vote_average/2" readonly="true" stars="5" [cancel]="false" appAltoContraste>
-            </p-rating>
+  <div class="modal-body" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+    <div style="width: 18rem; float: left;" *ngIf="movie.poster_path !== null">
+      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
+        alt="Capa do filme {{movie.title}}">
+    </div>
+    <div style="width: 47rem; height: 28.5rem; float: right;" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+      <p-fieldset appAltoContraste [flagAltoContraste]="flagAltoContraste">
+        <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+          Descrição</p-header>
+        <p-scrollPanel [style]="{width: '100%', height: '13rem'}" styleClass="custom" appAltoContraste
+          [flagAltoContraste]="flagAltoContraste">
+          <div class="text" style="padding:1em;line-height:1.5;text-align: justify;"
+            [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+            {{movie.overview}}
           </div>
-        </p-fieldset>
+        </p-scrollPanel>
+      </p-fieldset>
+      <div class="ui-g">
+        <div class="ui-g-4">
+          <p-fieldset [style]="{height: '9rem'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+            <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+              Alcance</p-header>
+            <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste
+              [flagAltoContraste]="flagAltoContraste">{{movie.popularity}}</h5>
+          </p-fieldset>
+        </div>
+        <div class="ui-g-4">
+          <p-fieldset [style]="{height: '9rem'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+            <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+              Votos</p-header>
+            <h5 class="first text-title center" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste
+              [flagAltoContraste]="flagAltoContraste">{{movie.vote_count}}</h5>
+          </p-fieldset>
+        </div>
+        <div class="ui-g-4">
+          <p-fieldset [style]="{height: '9rem'}">
+            <p-header [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste [flagAltoContraste]="flagAltoContraste">Nota
+            </p-header>
+            <div class="center nota">
+              <label class="text-title" [ngStyle]="{'font-size': fonteTitulo+'%'}" appAltoContraste
+                [flagAltoContraste]="flagAltoContraste">{{movie.vote_average}}</label><br>
+              <ngb-rating [ngStyle]="{'font-size': fonteTitulo+'%'}" [rate]="movie.vote_average/2" [max]="5"
+                [readonly]="true" appAltoContraste [flagAltoContraste]="flagAltoContraste"></ngb-rating>
+            </div>
+          </p-fieldset>
+        </div>
       </div>
     </div>
   </div>
-</p-dialog>
+</ng-template>
 <div *ngIf="flagShowComponent === true">
   <div *ngFor="let dataObject of data">
     <div class="content">
@@ -70,7 +83,8 @@
                 <div *ngFor="let movie of dataObject.movies" class="inline">
                   <div *ngIf="movie.poster_path !== null" class="inline">
                     <div class="card" style="width: 18rem; height: 100%;" drag-scroll-item data-toggle="modal"
-                      (click)="onFindMovieByID(movie.id)" appAltoContraste [flagAltoContraste]="flagAltoContraste">
+                      (click)="onFindMovieByID(movie.id, content)" appAltoContraste
+                      [flagAltoContraste]="flagAltoContraste">
                       <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                         alt="Capa do filme {{movie.title}} - clique para ver detalhes">
                       <div class="card-footer">

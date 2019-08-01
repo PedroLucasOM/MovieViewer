@@ -3,6 +3,7 @@ import { GenreMovieService } from './genre-movie.service';
 import { Genre, Movie } from 'src/app/core/model';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { PopularMovieService } from '../popular-movie/popular-movie.service';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-genre-movie',
@@ -18,13 +19,16 @@ export class GenreMovieComponent implements OnInit {
   data: Genre[];
   movie: Movie = new Movie();
 
+  closeResult: string;
+
   flagMoviesByGenre = false;
-  flagView = false;
   @Input() flagShowComponent = true;
 
   @ViewChildren('nav') dragScrolls: QueryList<DragScrollComponent>;
 
-  constructor(private serviceGenreMovie: GenreMovieService, private servicePopularMovieService: PopularMovieService) { }
+  constructor(private serviceGenreMovie: GenreMovieService, private servicePopularMovieService: PopularMovieService,
+      // tslint:disable-next-line: align
+      private modalService: NgbModal) { }
 
   ngOnInit() {
     this.onFindMoviesByGenre();
@@ -35,12 +39,11 @@ export class GenreMovieComponent implements OnInit {
     this.flagMoviesByGenre = true;
   }
 
-  onFindMovieByID(id: string) {
-    this.flagView = false;
+  onFindMovieByID(id: string, content: any) {
     this.servicePopularMovieService.onFindMovie(id).then(
       response => {
         this.movie = response;
-        this.flagView = true;
+        this.open(content);
       }
     );
   }
@@ -56,5 +59,23 @@ export class GenreMovieComponent implements OnInit {
     const index = this.data.indexOf(object);
     this.dragScrolls.toArray();
     this.dragScrolls['_results'][index].moveRight();
+  }
+
+  open(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', centered: true, size: 'xl' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }

@@ -26,6 +26,10 @@
   font-weight: bold;
 }
 
+.nota {
+  margin-top: -10%;
+}
+
 .card-footer {
   min-height: 75px;
   height: auto;
