@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
   fonteTitulo = 150;
   flagAltoContraste = false;
 
+  menu = false;
+
   text: string;
   flagReturnHome = false;
   @Output() searchMoviesEvent = new EventEmitter();
@@ -29,6 +31,7 @@ export class NavbarComponent implements OnInit {
 
   onSearchMovies() {
     if (this.text && this.text.trim()) {
+      this.menu = false;
       this.searchMoviesEvent.emit(this.text);
     } else {
       this.onReturnHome();
@@ -62,6 +65,10 @@ export class NavbarComponent implements OnInit {
   onAltoContraste() {
     this.flagAltoContraste = !this.flagAltoContraste;
     this.altoContraste.emit(this.flagAltoContraste);
+  }
+
+  onMostrarMenu() {
+    this.menu = !this.menu;
   }
 
 }

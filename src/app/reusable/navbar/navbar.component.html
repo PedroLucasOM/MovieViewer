@@ -1,45 +1,82 @@
 <nav class="navbar" appAltoContraste [flagAltoContraste]="flagAltoContraste">
-  <div class="ui-g" style="width: 100%;">
-    <div class="ui-g-6">
-      <div class="ui-g ui-fluid">
-        <div class="ui-g-3">
+  <div class="row">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-2">
           <h3 class="title" style="cursor: pointer;white-space: normal;" (click)="onReturnHome()"
             [ngStyle]="{'font-size': fonteTitulo+'%'}" tabindex="1">MovieViewer</h3>
         </div>
       </div>
     </div>
-    <div class="ui-g-6">
-      <div class="btn-toolbar">
-        <div class="ui-g ui-fluid">
-          <div class="ui-g-7">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-9">
+          <div class="navbar-find">
             <div class="input-group">
               <input appAltoContraste [flagAltoContraste]="flagAltoContraste" type="text" class="form-control"
                 placeholder="Pesquise filmes por título" [(ngModel)]="text" [ngStyle]="{'font-size': fonte+'%'}"
                 tabindex="2" aria-label="Pesquisar por título">
               <div class="input-group-prepend">
                 <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
-                  (click)="onSearchMovies()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Pesquisar" tabindex="3" placement="bottom" ngbTooltip="Pesquisar"><i
-                    class="fa fa-search"></i></button>
+                  (click)="onSearchMovies()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Pesquisar" tabindex="3"
+                  placement="bottom" ngbTooltip="Pesquisar"><i class="fa fa-search"></i></button>
               </div>
             </div>
           </div>
-          <div class="ui-g-2"></div>
-          <div class="btn-group ui-g-3 ui-fluid" role="group">
+        </div>
+        <div class="col-3">
+          <div class="navbar-tool">
+            <div class="btn-group" role="group">
+              <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
+                (click)="onAltoContraste()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Ativar alto contraste"
+                tabindex="4" placement="bottom" ngbTooltip="Alto contraste"><i class="fa fa-adjust"></i></button>
+              <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
+                (click)="onDiminuirFonte()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Diminuir fonte"
+                tabindex="5" placement="bottom" ngbTooltip="Diminuir fonte"><i class="fa fa-minus"></i></button>
+              <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
+                (click)="onNormalizarFonte()" [ngStyle]="{'font-size': fonte+'%'}" tabindex="6"><i class="fa fa-font"
+                  aria-label="Normalizar fonte" placement="bottom" ngbTooltip="Normalizar fonte"></i></button>
+              <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
+                (click)="onAumentarFonte()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Aumentar fonte"
+                tabindex="7" placement="bottom" ngbTooltip="Aumentar fonte"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="navbar-toggle">
             <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
-              (click)="onAltoContraste()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Ativar alto contraste"
-              tabindex="4" placement="bottom" ngbTooltip="Alto contraste"><i class="fa fa-adjust"></i></button>
-            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
-              (click)="onDiminuirFonte()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Diminuir fonte"
-              tabindex="5" placement="bottom" ngbTooltip="Diminuir fonte"><i class="fa fa-minus"></i></button>
-            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
-              (click)="onNormalizarFonte()" [ngStyle]="{'font-size': fonte+'%'}" tabindex="6"><i class="fa fa-font"
-                aria-label="Normalizar fonte" placement="bottom" ngbTooltip="Normalizar fonte"></i></button>
-            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
-              (click)="onAumentarFonte()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Aumentar fonte" tabindex="7"
-              placement="bottom" ngbTooltip="Aumentar fonte"><i class="fa fa-plus"></i></button>
+              [ngStyle]="{'font-size': fonte+'%'}" aria-label="Mostrar menu" tabindex="4" placement="bottom"
+              ngbTooltip="Mostrar menu" (click)="onMostrarMenu()"><i class="fa fa-bars"></i></button>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div *ngIf="menu">
+    <ul class="navbar-menu" [ngStyle]="{'font-size': fonte+'%'}" appAltoContraste
+      [flagAltoContraste]="flagAltoContraste">
+      <li class="navbar-menuitem">
+        <div class="input-group">
+          <input appAltoContraste [flagAltoContraste]="flagAltoContraste" type="text" class="form-control"
+            placeholder="Pesquisar" [(ngModel)]="text" [ngStyle]="{'font-size': fonte+'%'}" tabindex="5"
+            aria-label="Pesquisar por título">
+          <div class="input-group-prepend">
+            <button type="button" appAltoContraste [flagAltoContraste]="flagAltoContraste" class="btn btn-light"
+              (click)="onSearchMovies()" [ngStyle]="{'font-size': fonte+'%'}" aria-label="Pesquisar" tabindex="5"
+              placement="bottom" ngbTooltip="Pesquisar"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </li>
+      <li class="navbar-menuitem">
+        <button class="botao-menuitem" tabindex="5" (click)="onAltoContraste()"><i
+            class="fa fa-adjust icon-menu"></i>Alto contraste</button></li>
+      <li class="navbar-menuitem">
+        <button class="botao-menuitem" tabindex="5" (click)="onDiminuirFonte()"><i class="fa fa-minus icon-menu"></i>Diminuir
+          fonte</button></li>
+      <li class="navbar-menuitem">
+        <button class="botao-menuitem" tabindex="5" (click)="onNormalizarFonte()"><i class="fa fa-font icon-menu"></i>Normalizar
+          fonte</button></li>
+      <li class="navbar-menuitem">
+        <button class="botao-menuitem" tabindex="5" (click)="onAumentarFonte()"><i class="fa fa-plus icon-menu"></i>Aumentar
+          fonte</button></li>
+    </ul>
   </div>
 </nav>
