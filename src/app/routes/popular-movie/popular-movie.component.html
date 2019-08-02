@@ -73,23 +73,23 @@
   <div class="ui-g ui-fluid">
     <div class="ui-g-12 d-flex justify-content-center">
       <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft()" appAltoContraste
-        [flagAltoContraste]="flagAltoContraste">
+        [flagAltoContraste]="flagAltoContraste" tabindex="8">
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
       <div class="panel-body ui-g-10">
         <div *ngIf="flagPopularMovies === true">
           <drag-scroll style="width: 100%" [drag-scroll-disabled]="true" #nav>
             <div *ngFor="let movie of movies" class="inline">
-              <div class="card" style="width: 18rem;height: 100%;" drag-scroll-item data-toggle="modal"
+              <button class="card" style="width: 18rem;height: 100%;" drag-scroll-item data-toggle="modal"
                 (click)="onFindMovieByID(movie.id, content)" *ngIf="movie.poster_path !== null" appAltoContraste
-                [flagAltoContraste]="flagAltoContraste">
+                [flagAltoContraste]="flagAltoContraste" tabindex="9">
                 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                   alt="Capa do filme {{movie.title}} - Clique para ver detalhes">
                 <div class="card-footer">
                   <h5 class="card-title" style="text-align: center; font-weight: bold; white-space: normal"
                     [ngStyle]="{'font-size': fonte+'%'}">{{movie.title}}</h5>
                 </div>
-              </div>
+              </button>
             </div>
           </drag-scroll>
           <div *ngIf="flagPopularMovies === false" class="spinner">
@@ -99,7 +99,7 @@
         </div>
       </div>
       <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()" alt="Botão para mostrar filmes posteriores"
-        appAltoContraste [flagAltoContraste]="flagAltoContraste">
+        appAltoContraste [flagAltoContraste]="flagAltoContraste" tabindex="10">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
