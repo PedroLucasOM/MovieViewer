@@ -34,3 +34,7 @@
   min-height: 75px;
   height: auto;
 }
+
+.inline {
+  display: -webkit-inline-box !important;
+}

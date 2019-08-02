@@ -74,7 +74,7 @@
       <div class="ui-g ui-fluid">
         <div class="ui-g-12 d-flex justify-content-center">
           <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft(dataObject)" appAltoContraste
-            [flagAltoContraste]="flagAltoContraste" tabindex="11">
+            [flagAltoContraste]="flagAltoContraste" tabindex="9">
             <mat-icon>keyboard_arrow_left</mat-icon>
           </button>
           <div class="panel-body ui-g-10">
@@ -84,7 +84,7 @@
                   <div *ngIf="movie.poster_path !== null" class="inline">
                     <button class="card" style="width: 18rem; height: 100%;" drag-scroll-item data-toggle="modal"
                       (click)="onFindMovieByID(movie.id, content)" appAltoContraste
-                      [flagAltoContraste]="flagAltoContraste" tabindex="11">
+                      [flagAltoContraste]="flagAltoContraste" tabindex="9">
                       <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                         alt="Capa do filme {{movie.title}} - clique para ver detalhes">
                       <div class="card-footer">
@@ -102,7 +102,7 @@
             </div>
           </div>
           <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight(dataObject)" appAltoContraste
-            [flagAltoContraste]="flagAltoContraste" tabindex="11">
+            [flagAltoContraste]="flagAltoContraste" tabindex="9">
             <mat-icon>keyboard_arrow_right</mat-icon>
           </button>
         </div>

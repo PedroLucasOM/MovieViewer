@@ -82,7 +82,7 @@
             <div *ngFor="let movie of movies" class="inline">
               <button class="card" style="width: 18rem;height: 100%;" drag-scroll-item data-toggle="modal"
                 (click)="onFindMovieByID(movie.id, content)" *ngIf="movie.poster_path !== null" appAltoContraste
-                [flagAltoContraste]="flagAltoContraste" tabindex="9">
+                [flagAltoContraste]="flagAltoContraste" tabindex="8">
                 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top"
                   alt="Capa do filme {{movie.title}} - Clique para ver detalhes">
                 <div class="card-footer">
@@ -99,7 +99,7 @@
         </div>
       </div>
       <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()" alt="Botão para mostrar filmes posteriores"
-        appAltoContraste [flagAltoContraste]="flagAltoContraste" tabindex="10">
+        appAltoContraste [flagAltoContraste]="flagAltoContraste" tabindex="8">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
