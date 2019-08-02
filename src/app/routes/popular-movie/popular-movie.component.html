@@ -73,7 +73,7 @@
   <div class="ui-g ui-fluid">
     <div class="ui-g-12 d-flex justify-content-center">
       <button mat-icon-button class="ui-g-1 button" (click)="onMoveLeft()" appAltoContraste
-        [flagAltoContraste]="flagAltoContraste" tabindex="8">
+        [flagAltoContraste]="flagAltoContraste" tabindex="8" placement="left" ngbTooltip="Passar filmes à esquerda">
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
       <div class="panel-body ui-g-10">
@@ -99,7 +99,7 @@
         </div>
       </div>
       <button mat-icon-button class="ui-g-1 button" (click)="onMoveRight()" alt="Botão para mostrar filmes posteriores"
-        appAltoContraste [flagAltoContraste]="flagAltoContraste" tabindex="8">
+        appAltoContraste [flagAltoContraste]="flagAltoContraste" tabindex="8" placement="right" ngbTooltip="Passar filmes à direita">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
