@@ -1,27 +1,45 @@
 # MovieViewerUI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 8.1.0.
 
-## Development server
+## Implementação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Baixe este repositório e execute npm install na raiz do mesmo.
 
-## Code scaffolding
+## Servidor de Desenvolvimento
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute `ng serve` para rodar o servidor. Navegue para `http://localhost:4200/`.
 
-## Build
+## Funcionalidades
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Listagem de Filmes Populares
 
-## Running unit tests
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/1.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Listagem de Filmes por Gênero
 
-## Running end-to-end tests
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/7.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Visualizar Informações de Filmes
 
-## Further help
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/3.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Pesquisar Filmes Por Título
+
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/9.png)
+
+## Acessibilidade
+
+#### Ativar Alto Contraste
+
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/2.png)
+
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/4.png)
+
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/8.png)
+
+#### Aumentar, Diminuir e Normalizar Fonte Dinamicamente
+
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/5.png)
+
+![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/6.png)
