@@ -4,7 +4,7 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 ## Implementação
 
-Baixe este repositório e execute npm install na raiz do mesmo.
+Baixe este repositório e execute `npm install` na raiz do mesmo.
 
 ## Servidor de Desenvolvimento
 
