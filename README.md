@@ -1,45 +1,69 @@
-# MovieViewerUI
+<h1 align="center">Welcome to MovieViewer 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D5.5.0-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D9.3.0-blue.svg" />
+  <a href="https://github.com/PedroLucasOM/MovieViewer#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/PedroLucasOM/MovieViewer/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/PedroLucasOM/MovieViewer" />
+  </a>
+  <a href="https://twitter.com/PedroLucasOM" target="_blank">
+    <img alt="Twitter: PedroLucasOM" src="https://img.shields.io/twitter/follow/PedroLucasOM.svg?style=social" />
+  </a>
+</p>
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 8.1.0.
+> Angular interface for searching and viewing movie information through The Movie DB API.
 
-## Implementação
+### 🏠 [Homepage](https://github.com/PedroLucasOM/MovieViewer)
 
-Baixe este repositório e execute `npm install` na raiz do mesmo.
+## Prerequisites
 
-## Servidor de Desenvolvimento
+- npm >=5.5.0
+- node >=9.3.0
 
-Execute `ng serve` para rodar o servidor. Navegue para `http://localhost:4200/`.
+## Install
 
-## Funcionalidades
+```sh
+npm install
+```
 
-#### Listagem de Filmes Populares
+## Usage
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/1.png)
+```sh
+npm run start
+```
 
-#### Listagem de Filmes por Gênero
+## Run tests
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/7.png)
+```sh
+npm run test
+```
 
-#### Visualizar Informações de Filmes
+## Author
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/3.png)
+👤 **Pedro Lucas**
 
-#### Pesquisar Filmes Por Título
+* Twitter: [@PedroLucasOM](https://twitter.com/PedroLucasOM)
+* Github: [@PedroLucasOM](https://github.com/PedroLucasOM)
+* LinkedIn: [@PedroLucasOM](https://linkedin.com/in/PedroLucasOM)
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/9.png)
+## 🤝 Contributing
 
-## Acessibilidade
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/PedroLucasOM/MovieViewer/issues). 
 
-#### Ativar Alto Contraste
+## Show your support
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/2.png)
+Give a ⭐️ if this project helped you!
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/4.png)
+## 📝 License
 
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/8.png)
+Copyright © 2020 [Pedro Lucas](https://github.com/PedroLucasOM).<br />
+This project is [MIT](https://github.com/PedroLucasOM/MovieViewer/blob/master/LICENSE) licensed.
 
-#### Aumentar, Diminuir e Normalizar Fonte Dinamicamente
-
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/5.png)
-
-![](https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/6.png)
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
