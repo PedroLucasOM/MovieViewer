@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
-import { MakeRequestService } from 'src/app/shared/request/make-request.service';
-import { Movie } from 'src/app/core/model';
+import {Injectable} from '@angular/core';
+import {MakeRequestService} from 'src/app/shared/request/make-request.service';
+import {Movie} from 'src/app/core/model';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PopularMovieService {
 
-  url = 'https://api.themoviedb.org/3/movie';
-  apiKey = 'api_key=05c3c451dfb4b3b129b21ec835de3158';
-  language = 'language=pt-BR';
+  url = `${environment.url}/movie`;
+  apiKey = environment.apiKey;
+  language = environment.language;
 
-  constructor(private serviceMakeRequest: MakeRequestService) { }
+  constructor(private serviceMakeRequest: MakeRequestService) {
+  }
 
   onFindPopularMovies() {
     return this.serviceMakeRequest.onMakeRequest(this.url + '/popular' + '?' + this.apiKey + '&' + this.language).then(

@@ -1,23 +1,24 @@
 // tslint:disable: prefer-for-of
-import { Injectable } from '@angular/core';
-import { MakeRequestService } from 'src/app/shared/request/make-request.service';
-import { Movie, Genre } from 'src/app/core/model';
+import {Injectable} from '@angular/core';
+import {MakeRequestService} from 'src/app/shared/request/make-request.service';
+import {Genre, Movie} from 'src/app/core/model';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GenreMovieService {
 
-  url = 'https://api.themoviedb.org/3';
-  apiKey = 'api_key=05c3c451dfb4b3b129b21ec835de3158';
-  language = 'language=pt-BR';
+  url = environment.url;
+  apiKey = environment.apiKey;
+  language = environment.language;
 
   genres: Genre[] = [];
   data: Genre[] = [];
   valid: Movie[] = [];
-  valided: Movie[] = [];
 
-  constructor(private serviceMakeRequest: MakeRequestService) { }
+  constructor(private serviceMakeRequest: MakeRequestService) {
+  }
 
   onMakeListMovieByGenre() {
     this.onFindGenres()
