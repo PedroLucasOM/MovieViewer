@@ -72,7 +72,7 @@ ng serve
 <img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/6.png" /> 
 <br />
 
-#### Dynamically shrink font
+#### Normalize font
 
 <img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/7.png" /> 
 <br />
