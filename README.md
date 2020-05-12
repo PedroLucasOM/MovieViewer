@@ -40,6 +40,54 @@ npm install
 ng serve
 ```
 
+#### Popular movies
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/1.png" /> 
+<br />
+
+#### Movies by genre
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/7.png" /> 
+<br />
+
+#### Movies searched by title
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/9.png" /> 
+<br />
+
+#### Information display
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/3.png" /> 
+<br />
+
+## Accessibility
+
+#### Dynamically increase font
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/5.png" /> 
+<br />
+
+#### Dynamically shrink font
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/5.png" /> 
+<br />
+
+#### Dynamically shrink font
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/6.png" /> 
+<br />
+
+#### Enable high contrast
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/2.png" /> 
+<br />
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/4.png" /> 
+<br />
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/8.png" /> 
+<br />
+
 ## Author
 
 👤 **Pedro Lucas**
