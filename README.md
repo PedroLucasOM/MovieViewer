@@ -47,17 +47,17 @@ ng serve
 
 #### Movies by genre
 
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/7.png" /> 
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/2.png" /> 
 <br />
 
 #### Movies searched by title
 
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/9.png" /> 
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/3.png" /> 
 <br />
 
 #### Information display
 
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/3.png" /> 
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/4.png" /> 
 <br />
 
 ## Accessibility
@@ -69,23 +69,26 @@ ng serve
 
 #### Dynamically shrink font
 
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/5.png" /> 
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/6.png" /> 
 <br />
 
 #### Dynamically shrink font
 
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/6.png" /> 
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/7.png" /> 
 <br />
 
 #### Enable high contrast
 
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/2.png" /> 
-<br />
-
-<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/4.png" /> 
-<br />
-
 <img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/8.png" /> 
+<br />
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/9.png" /> 
+<br />
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/10.png" /> 
+<br />
+
+<img align="center" src="https://github.com/PedroLucasOM/MovieViewer/blob/master/src/assets/images/11.png" /> 
 <br />
 
 ## Author
