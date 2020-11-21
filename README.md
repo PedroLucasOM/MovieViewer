@@ -18,7 +18,7 @@
   </a>
 </p>
 
-> Angular interface for searching and viewing movie information through The Movie DB API.
+> Angular application for searching and viewing movies from The Movie DB database.
 
 ### 🏠 [Homepage](https://github.com/PedroLucasOM/MovieViewer)
 
