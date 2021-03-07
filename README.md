@@ -18,7 +18,7 @@
   </a>
 </p>
 
-> Angular application for searching and viewing movies from The Movie DB database.
+> :computer: Angular application for searching and viewing :mag_right: movies from The Movie DB database :movie_camera:.
 
 ### 🏠 [Homepage](https://github.com/PedroLucasOM/MovieViewer)
 
